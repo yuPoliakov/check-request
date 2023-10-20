@@ -18,14 +18,26 @@ export default defineEventHandler(async (event) => {
         console.log('sending a message')
         client.send({
           headers: event.node.req.rawHeaders,
-          rawBody: rawBody.length ? JSON.parse(rawBody) : '',
+          rawBody: parseJSON(rawBody),
           params
         })
       }
     })
 
-    return { headers: event.node.req.rawHeaders, rawBody: JSON.parse(rawBody) }
+    return { statusCode: 200 }
   } catch (error) {
     return { message: error.message, error: true};
   }
 });
+
+function parseJSON(json) {
+  try {
+    if (!json.length) {
+      return ''
+    }
+
+    return JSON.parse(json)
+  } catch (error) {
+    return json
+  }
+}

@@ -5,7 +5,8 @@
       </div>
       <div class="mt-20">
         <div class="flex justify-center mt-10 mb-10">
-          Send your request to {{ url.protocol }}//{{ url.host }}{{ $router.resolve(`api/${$route.params.id}`).href }}
+          <span>Send your request to</span>
+          <span class="ml-2 font-semibold"> {{ url.protocol }}//{{ url.host }}{{ $router.resolve(`api/${$route.params.id}`).href }}</span>
         </div>
         <div class="flex justify-left mt-10 mb-10">
           <ObjectVisualizer :data="request" rootName="Your Request Data"></ObjectVisualizer>

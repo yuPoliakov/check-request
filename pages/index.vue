@@ -1,15 +1,17 @@
 <template>
   <div>
-      <div class="flex justify-center mt-10 mb-10">
-        <h1 class="font-semibold leading-6 text-gray-900">Check Request</h1>
-      </div>
       <div class="mt-20">
-        <div class="mt-2 flex items-center gap-x-3">
+        <div class="mt-2 flex justify-center gap-x-3 font-mono">
+          <div class="w-96">
+            <span>After click Start button you will be redirected to your instance.
+              An URL will be generated to which you could send your requests and observe details about it.
+            </span>
+          </div>
           <button
             @click="proceedToInstance"
             type="button"
-            class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-          >
+            class="font-mono rounded-md px-2.5 py-1.5 text-sm text-black-900 shadow-sm ring-1 ring-inset ring-black hover:bg-gray-50 w-60 h-14"
+            >
             START
           </button>
         </div>

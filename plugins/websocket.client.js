@@ -5,7 +5,7 @@ export default defineNuxtPlugin(() => {
     return
   }
 
-  const socket = io(`${window.location.protocol}//${window.location.host}`)
+  const socket = io('https://127.0.0.1:3000')
 
   return {
     provide: {

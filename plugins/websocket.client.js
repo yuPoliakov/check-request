@@ -5,7 +5,9 @@ export default defineNuxtPlugin(() => {
     return
   }
 
-  const socket = io('https://127.0.0.1:3000')
+  const socket = io('https://check-request.com', {
+    rejectUnauthorized: false
+  })
 
   return {
     provide: {

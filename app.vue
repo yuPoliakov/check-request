@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <header>
-        <h1 class="font-mono p-10 text-lg">Check Your Request</h1>
+        <h1 class="font-mono p-10 text-lg"><a href="/">Check Your Request</a></h1>
     </header>
     <main>
         <NuxtPage/>

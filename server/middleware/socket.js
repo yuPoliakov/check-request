@@ -9,22 +9,15 @@ export default defineEventHandler((event) => {
       io = new Server(event.node.res.socket?.server )
 
       io.on('connection', (socket) => {
-        console.log("CONNECTION", socket.id)
-
         socket.on('disconnecting', (data) => {
-          console.log('disconnecting', data, socket.id)
-        })
-
-        socket.on('message', (data) => {
-          console.log('message received: %s', data, socket.id)
+          global.clients = global.clients.filter(client => client.socketId !== socket.id)
         })
 
         socket.on('register', (id, cb) => {
-          console.log('registered: %s', id, socket.id)
-
           if (!global.clients.find(client => client.id === id)) {
             global.clients.push({
               id: id,
+              socketId: socket.id,
               send: (data) => socket.emit('custom', data)
             })
           }

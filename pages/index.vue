@@ -1,12 +1,15 @@
 <template>
   <div>
       <div class="mt-20">
-        <div class="mt-2 flex justify-center gap-x-3 font-mono">
-          <div class="w-96">
-            <span>After click Start button you will be redirected to your instance.
-              An URL will be generated to which you could send your requests and observe details about it.
-            </span>
+        <div class="flex justify-center font-mono mb-10">
+          <div class="w-1/2">
+            This website will help you to analyze your request and see details of it.
+            After clicking the Start button you will be redirected to the page with an endpoint.
+            A URL will be generated to which you can send your requests and observe details.
+            The details include headers, body, and parameters.
           </div>
+        </div>
+        <div class="flex justify-center font-mono">
           <button
             @click="proceedToInstance"
             type="button"

@@ -2,7 +2,10 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Check Request'
+      title: 'Check Request',
+      meta: [
+        {name: 'Check Request', content: 'Check your REST API request'}
+      ],
     }
   },
   devtools: { enabled: false },

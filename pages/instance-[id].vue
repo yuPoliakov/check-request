@@ -24,7 +24,6 @@
   import 'object-visualizer/dist/index.min.css'
   const { $socket } = useNuxtApp()
   const route = useRoute()
-  const message = ref('')
   const requestURL = ref('')
   const isCopied = ref(false)
   const request = reactive({

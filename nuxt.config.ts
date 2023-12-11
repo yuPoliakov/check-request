@@ -8,9 +8,14 @@ export default defineNuxtConfig({
       ],
     }
   },
+  runtimeConfig: {
+    public: {
+      baseUrl: process.env.BASE_URL
+    }
+  },
   devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss', 'nuxt-gtag'],
   gtag: {
-    id: 'G-EBDMNQGG6G'
+    id: process.env.GTAG
   }
 })
